@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeathFormViewActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintlayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="*परिवार/घर नं"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/house_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:hint="House No"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="*एक वर्ष यता कसैको मृत्यु भएको"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/house_no" />
+
+            <RadioButton
+                android:id="@+id/death_oneyear_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/death_oneyear_yes"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/death_oneyear_yes"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <RadioButton
+                android:id="@+id/death_oneyear_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Yes"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/death_oneyear_no" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="*मृत्युको कारण "
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/death_oneyear_yes" />
+
+            <Spinner
+                android:id="@+id/spinner_death_cause"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:layout_margin="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:dropDownWidth="200dp"
+                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                android:popupBackground="@android:color/white"
+                android:popupElevation="3dp"
+                android:stateListAnimator="@drawable/spinner_sla"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="PrivateResource" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="*एक वर्ष यताको मृत्यु संख्या"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_death_cause" />
+
+            <EditText
+                android:id="@+id/no_of_death"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/dropdownListPreferredItemHeight"
+                android:layout_margin="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="if any"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="*मृत्यु को कारण-अन्य"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_of_death" />
+
+            <EditText
+                android:id="@+id/death_reason_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:hint="Other reason"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_selector"
+                android:textColor="#fff"
+                android:text="Cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/death_reason_other"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:background="@drawable/button_selector"
+                android:textColor="#fff"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cancel_button"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
